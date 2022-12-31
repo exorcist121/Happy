@@ -17,7 +17,7 @@ window.onload = function (){
 			result => {
 					setTimeout(function(){
 						// document.querySelector('.preloader').classList.add('loaded')
-						document.body.classList.add('visible')
+						document.body.classList.add('visible-mobile')
 					}, 5000)
 			}
 		);
@@ -39,7 +39,7 @@ promise
 		result => {
 				setTimeout(function(){
 					// document.querySelector('.preloader').classList.add('loaded')
-					document.body.classList.add('visible-mobile')
+					document.body.classList.add('visible')
 				}, 5000)
 		}
 	);
