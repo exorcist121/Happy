@@ -5,29 +5,30 @@
 
 window.onload = function (){
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+		document.querySelector('.preloader').classList.add('preloader-mobile')
+		setTimeout(function() {
+			let promise = new Promise((resolve, reject) => {
+				setTimeout(function(){
+				document.querySelector('.presents').classList.add('invisible')
+				resolve("result");
+			}, 4000)
+		});
+		promise
+			.then(
+				result => {
+						setTimeout(function(){
+							// document.querySelector('.preloader').classList.add('loaded')
+							document.body.classList.add('visible')
+						}, 5000)
+				}
+			);
+			Draggable.create('.content__gallery', {
+				bounds: 'body',
+				inertia: true
+			})
+		}, 200)
+	} else 
 	setTimeout(function() {
-		let promise = new Promise((resolve, reject) => {
-			setTimeout(function(){
-			document.querySelector('.presents').classList.add('invisible')
-			resolve("result");
-		}, 4000)
-	});
-	promise
-		.then(
-			result => {
-					setTimeout(function(){
-						// document.querySelector('.preloader').classList.add('loaded')
-						document.body.classList.add('visible-mobile')
-					}, 5000)
-			}
-		);
-		Draggable.create('.content__gallery', {
-			bounds: 'body',
-			inertia: true
-		})
-	}, 200)
-} else 
-setTimeout(function() {
 	let promise = new Promise((resolve, reject) => {
 		setTimeout(function(){
 		document.querySelector('.presents').classList.add('invisible')
