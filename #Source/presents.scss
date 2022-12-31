@@ -31,7 +31,7 @@
 			h1 {
 				font-family: 'Poppins';
 				color: #EFC87E;
-				font-size: 62px;
+				font-size: calc(var(--index) * 3.1);
 				-webkit-animation: mainFadeIn 2s forwards;
 				-o-animation: mainFadeIn 2s forwards;
 				animation: mainFadeIn 2s forwards;
@@ -54,7 +54,7 @@
 					margin-top: -10px;
 					position: absolute;
 					bottom: 13px;
-					right: -12px;
+					right: -20px;
 				}
 			}
 		}
@@ -81,7 +81,7 @@
 				font-weight: 400;
 				font-family: 'Lato';
 				color: #EFC87E;
-				font-size: 22px;
+				font-size: calc(var(--index) * 1.8);
 				text-transform: uppercase;
 				letter-spacing: 5px;
 			}
